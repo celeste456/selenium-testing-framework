@@ -1,5 +1,0 @@
-Gender: male
-First Name: Basil
-Last Name: Dickinson
-Email: elsy.lebsack@hotmail.com
-Password: yv4hdy27y
