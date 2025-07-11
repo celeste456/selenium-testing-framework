@@ -13,7 +13,6 @@ public class DriverFactory {
         if (driver.get() == null) {
             ChromeOptions options = new ChromeOptions();
 
-            // remove password manager
             Map<String, Object> prefs = new HashMap<>();
             prefs.put("credentials_enable_service", false);
             prefs.put("profile.password_manager_enabled", false);
@@ -22,15 +21,9 @@ public class DriverFactory {
             prefs.put("profile.autofill_address_enabled", false);
 
             options.setExperimentalOption("prefs", prefs);
-
-            // For CI
             options.addArguments("--disable-save-password-bubble");
             options.addArguments("--disable-autofill-keyboard-accessory-view[8]");
             options.addArguments("--disable-autofill");
-            options.addArguments("--headless=new"); // headless
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu"); // for Linux
 
             driver.set(new ChromeDriver(options));
         }
