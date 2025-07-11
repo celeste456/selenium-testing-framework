@@ -46,7 +46,7 @@ jobs:
           allure generate SeleniumFramework/target/allure-results --clean -o SeleniumFramework/allure-report
 
       - name: Upload Allure Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: SeleniumFramework/allure-report
