@@ -17,42 +17,46 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TestListener implements ITestListener {
-
-    @Override
-    public void onTestFailure(ITestResult result) {
+    private void captureScreenshot(ITestResult result, String status) {
         WebDriver driver = DriverFactory.getDriver();
 
         if (driver != null) {
-            // Name test as time stamp
             String methodName = result.getMethod().getMethodName();
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            String fileName = methodName + "_" + timestamp + ".png";
+            String fileName = methodName + "_" + status + "_" + timestamp + ".png";
 
-            //Screenshot as file
+            // Screenshot as file
             File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
-                File destFile = new File("./test-output/screenshots/" + fileName);
+                File destFile = new File("test-output/screenshots/" + fileName);
                 FileUtils.copyFile(screenshotFile, destFile);
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            //Screenshot => Allure
+            // Screenshot for Allure
             byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Screenshot on Failure", new ByteArrayInputStream(screenshotBytes));
+            Allure.addAttachment("Screenshot - " + status, new ByteArrayInputStream(screenshotBytes));
         }
     }
 
     @Override
-    public void onTestStart(ITestResult result) {}
+    public void onTestFailure(ITestResult result) {
+        captureScreenshot(result, "FAILURE");
+    }
+
     @Override
-    public void onTestSuccess(ITestResult result) {}
+    public void onTestSuccess(ITestResult result) {
+        captureScreenshot(result, "SUCCESS");
+    }
+
     @Override
-    public void onTestSkipped(ITestResult result) {}
-    @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
-    @Override
-    public void onStart(ITestContext context) {}
-    @Override
-    public void onFinish(ITestContext context) {}
+    public void onTestSkipped(ITestResult result) {
+        captureScreenshot(result, "SKIPPED");
+    }
+
+    @Override public void onTestStart(ITestResult result) {}
+    @Override public void onTestFailedButWithinSuccessPercentage(ITestResult result) {}
+    @Override public void onStart(ITestContext context) {}
+    @Override public void onFinish(ITestContext context) {}
 }
