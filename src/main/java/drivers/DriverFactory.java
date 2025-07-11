@@ -21,9 +21,14 @@ public class DriverFactory {
             prefs.put("profile.autofill_address_enabled", false);
 
             options.setExperimentalOption("prefs", prefs);
+
             options.addArguments("--disable-save-password-bubble");
             options.addArguments("--disable-autofill-keyboard-accessory-view[8]");
             options.addArguments("--disable-autofill");
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
 
             driver.set(new ChromeDriver(options));
         }
