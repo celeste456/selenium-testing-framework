@@ -1,5 +1,4 @@
 package tests;
-
 import base.BaseTest;
 import io.qameta.allure.*;
 import model.CheckoutData;
@@ -51,7 +50,9 @@ public class CheckoutTest extends BaseTest {
         String fax = "232134142";
 
         CheckoutData data = new CheckoutData(firstName, lastName, email, company, country, city, address, zip, phone, fax);
-        AllureUtils.logCheckoutData(data);
+
+        @SuppressWarnings("unused")
+        String ignored  = AllureUtils.logCheckoutData(data);
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         Allure.step("Filling billing address form...");
@@ -120,7 +121,9 @@ public class CheckoutTest extends BaseTest {
         String password = FakerUtils.generatePassword();
 
         UserData user = new UserData(gender, firstName, lastName, email, password);
-        AllureUtils.logUserData(user);
+
+        @SuppressWarnings("unused")
+        String ignored  = AllureUtils.logUserData(user);
 
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.selectGender(user.getGender());
@@ -154,7 +157,7 @@ public class CheckoutTest extends BaseTest {
         cartPage.acceptTermsAndConditions();
         cartPage.clickCheckout();
 
-        //Billing details (only extra fields)
+        // Billing details (only extra fields)
         String company = "Fidelitas";
         String country = "Costa Rica";
         String city = "San José";
@@ -164,7 +167,9 @@ public class CheckoutTest extends BaseTest {
         String fax = "232134142";
 
         CheckoutData checkoutData = new CheckoutData(firstName, lastName, email, company, country, city, address, zip, phone, fax);
-        AllureUtils.logCheckoutData(checkoutData);
+
+        @SuppressWarnings("unused")
+        String _2 = AllureUtils.logCheckoutData(checkoutData);
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         Allure.step("Completing billing address as logged-in user...");
@@ -177,7 +182,7 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.setFax(checkoutData.getFax());
         checkoutPage.clickContinueOnShippingAddress();
 
-        //SHIPPING
+        // SHIPPING
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout-step-shipping")));
         checkoutPage.clickContinueOnShippingMethod();
 
@@ -185,21 +190,19 @@ public class CheckoutTest extends BaseTest {
         checkoutPage.selectShippingMethodById("shippingoption_1");
         checkoutPage.clickContinueOnPaymentMethod();
 
-        //Payment method
+        // Payment method
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout-step-payment-method")));
-        checkoutPage.selectPaymentMethodById("paymentmethod_1"); // Check / Money Order
+        checkoutPage.selectPaymentMethodById("paymentmethod_1");
         checkoutPage.clickContinueOnPaymentInfo();
 
-        //Payment info
         WebElement paymentInfoSection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout-step-payment-info")));
-        Assert.assertTrue(paymentInfoSection.getText().contains("Mail Personal or Business Check"), "Expected payment instructions not found.");
+        Assert.assertTrue(paymentInfoSection.getText().contains("Mail Personal or Business Check"));
         Allure.step("Payment instructions verified:\n" + paymentInfoSection.getText());
 
         checkoutPage.clickContinueOnConfirmOrder();
 
-        //Confirmation
         WebElement confirmOrderForm = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout-step-confirm-order")));
-        Assert.assertTrue(confirmOrderForm.isDisplayed(), "Expected to be on Confirm Order step.");
+        Assert.assertTrue(confirmOrderForm.isDisplayed());
 
         checkoutPage.clickConfirmOrderButton();
 
@@ -207,8 +210,7 @@ public class CheckoutTest extends BaseTest {
         String messageText = successMessage.getText();
         Allure.step("Confirmation message:\n" + messageText);
 
-        Assert.assertTrue(messageText.contains("Your order has been successfully processed!"),
-                "Expected success message not found after confirming the order.");
+        Assert.assertTrue(messageText.contains("Your order has been successfully processed!"));
     }
 
     @Story("Cart - Validation Without Terms Agreement")
@@ -217,35 +219,27 @@ public class CheckoutTest extends BaseTest {
     public void testCannotProceedWithoutAcceptingTerms() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-        //Add product to cart
         HomePage homePage = new HomePage(driver);
         homePage.clickAddToCartOnSecondProduct();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bar-notification.success")));
         driver.findElement(By.cssSelector(".bar-notification .close")).click();
 
-        //Go to cart
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
         driver.findElement(By.cssSelector("span.cart-label")).click();
 
         CartPage cartPage = new CartPage(driver);
-
-        //Do not accept terms
         cartPage.clickCheckout();
 
-        //Wait for the popup to appear
         WebElement popupContent = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.id("terms-of-service-warning-box")));
 
         String popupText = popupContent.getText().trim();
         Allure.step("TOS Warning Popup Text:\n" + popupText);
 
-        Assert.assertTrue(popupText.contains("Please accept the terms of service before the next step."),
-                "Expected TOS warning message was not displayed.");
+        Assert.assertTrue(popupText.contains("Please accept the terms of service before the next step."));
 
-        //Close the popup
         WebElement closeBtn = driver.findElement(By.cssSelector(".ui-dialog-titlebar-close"));
         closeBtn.click();
     }
-
 }
