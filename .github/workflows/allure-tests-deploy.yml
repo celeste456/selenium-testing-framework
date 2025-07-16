@@ -44,8 +44,21 @@ jobs:
       - name: Run Tests
         run: mvn clean test || true
 
+      - name: Verificar archivos de resultado (antes del reporte)
+        run: |
+          echo "🗂 Contenido en target/allure-results:"
+          ls -lh target/allure-results || echo "❌ No se encontró target/allure-results"
+
+          echo "🔍 Buscando attachments:"
+          find target/allure-results -type f -name "*.txt" -exec ls -lh {} \;
+
       - name: Generate Allure Report
         run: allure generate target/allure-results --clean -o allure-report
+
+      - name: Verificar contenido de allure-report
+        run: |
+          echo "📁 Contenido de allure-report/data/attachments:"
+          ls -lh allure-report/data/attachments || echo "❌ No se encontraron attachments en el reporte generado"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
