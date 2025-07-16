@@ -18,6 +18,7 @@ import java.util.Date;
 
 public class TestListener implements ITestListener {
     private void captureScreenshot(ITestResult result, String status) {
+        System.out.println("📸 Capturando screenshot para Allure");
         WebDriver driver = DriverFactory.getDriver();
 
         if (driver != null) {
