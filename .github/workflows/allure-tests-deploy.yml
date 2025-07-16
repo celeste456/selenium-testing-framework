@@ -31,7 +31,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Install Allure
+      - name: Install Allure CLI
         run: |
           sudo apt update
           sudo apt install -y default-jre
@@ -44,21 +44,24 @@ jobs:
       - name: Run Tests
         run: mvn clean test || true
 
-      - name: Verificar archivos de resultado (antes del reporte)
+      - name: Verificar archivos .txt/.png en target/allure-results
         run: |
-          echo "🗂 Contenido en target/allure-results:"
-          ls -lh target/allure-results || echo "❌ No se encontró target/allure-results"
-
-          echo "🔍 Buscando attachments:"
-          find target/allure-results -type f -name "*.txt" -exec ls -lh {} \;
+          echo "🔍 Buscando attachments en target/allure-results"
+          find target/allure-results -type f \( -name "*.txt" -o -name "*.png" \) -exec ls -lh {} \; || echo "❌ No se encontraron .txt ni .png en target/allure-results"
 
       - name: Generate Allure Report
         run: allure generate target/allure-results --clean -o allure-report
 
-      - name: Verificar contenido de allure-report
+      - name: Verificar contenido en allure-report
         run: |
-          echo "📁 Contenido de allure-report/data/attachments:"
-          ls -lh allure-report/data/attachments || echo "❌ No se encontraron attachments en el reporte generado"
+          echo "📁 Contenido en allure-report/data/attachments:"
+          ls -lh allure-report/data/attachments || echo "❌ No se encontraron archivos en allure-report/data/attachments"
+
+      - name: Upload Allure Results as Artifact (opcional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: target/allure-results
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
