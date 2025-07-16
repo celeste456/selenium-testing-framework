@@ -36,7 +36,7 @@ public class TestListener implements ITestListener {
 
             // Screenshot for Allure
             byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Screenshot - " + status, new ByteArrayInputStream(screenshotBytes));
+            Allure.addAttachment("Screenshot - " + status, "image/png", new ByteArrayInputStream(screenshotBytes), ".png");
         }
     }
 

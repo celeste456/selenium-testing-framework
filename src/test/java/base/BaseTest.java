@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import utils.ConfigReader;
 
-@Listeners(listeners.TestListener.class)
+@Listeners({listeners.TestListener.class, io.qameta.allure.testng.AllureTestNg.class})
 public class BaseTest {
 
     protected WebDriver driver;
