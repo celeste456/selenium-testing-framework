@@ -1,5 +1,0 @@
-Gender: female
-First Name: Hiram
-Last Name: Kub
-Email: sierra.baumbach@gmail.com
-Password: 123

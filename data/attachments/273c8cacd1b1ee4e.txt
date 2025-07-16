@@ -1,5 +1,0 @@
-Gender: male
-First Name: Cliff
-Last Name: Lowe
-Email: cedric.nolan@gmail.com
-Password: 5h5ijvn5ay
