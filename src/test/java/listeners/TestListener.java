@@ -2,9 +2,10 @@ package listeners;
 
 import drivers.DriverFactory;
 import io.qameta.allure.Allure;
-import io.qameta.allure.AllureLifecycle;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -12,28 +13,10 @@ import org.testng.ITestResult;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-import java.util.Base64;
-import java.util.UUID;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TestListener implements ITestListener {
-
-    private void attachScreenshotToTest(String name, byte[] screenshot) {
-        String attachmentUuid = UUID.randomUUID().toString();
-        AllureLifecycle lifecycle = Allure.getLifecycle();
-
-        // Convertir byte[] a InputStream para escribir el archivo
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(screenshot);
-        lifecycle.writeAttachment(attachmentUuid, inputStream);
-
-        // Asociar el attachment al test actual
-        lifecycle.updateTestCase(result -> {
-            io.qameta.allure.model.Attachment attachment = new io.qameta.allure.model.Attachment();
-            attachment.setName(name);
-            attachment.setType("image/png");
-            attachment.setSource(attachmentUuid);
-            result.getAttachments().add(attachment);
-        });
-    }
 
     private void captureScreenshot(ITestResult result, String status) {
         System.out.println("📸 Capturando screenshot para Allure");
@@ -41,20 +24,20 @@ public class TestListener implements ITestListener {
         WebDriver driver = DriverFactory.getDriver();
 
         if (driver != null) {
-            // Guardar backup en carpeta
+            // Guardar respaldo en disco
             String methodName = result.getMethod().getMethodName();
-            String timestamp = String.valueOf(System.currentTimeMillis());
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
-                File dest = new File("test-output/screenshots/" + methodName + "_" + status + "_" + timestamp + ".png");
-                FileUtils.copyFile(screenshotFile, dest);
+                File destFile = new File("test-output/screenshots/" + methodName + "_" + status + "_" + timestamp + ".png");
+                FileUtils.copyFile(screenshotFile, destFile);
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            // Capturar y adjuntar a Allure
+            // Adjuntar directamente al test con Allure (¡esto sí lo asocia bien!)
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            attachScreenshotToTest("Screenshot - " + status, screenshot);
+            Allure.addAttachment("Screenshot - " + status, "image/png", new ByteArrayInputStream(screenshot), ".png");
         }
     }
 
