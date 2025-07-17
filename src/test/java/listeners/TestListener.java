@@ -2,6 +2,7 @@ package listeners;
 
 import drivers.DriverFactory;
 import io.qameta.allure.Allure;
+import io.qameta.allure.AllureLifecycle;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -10,13 +11,14 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 public class TestListener implements ITestListener {
+
     private void captureScreenshot(ITestResult result, String status) {
         System.out.println("📸 Capturando screenshot para Allure");
         WebDriver driver = DriverFactory.getDriver();
@@ -26,7 +28,7 @@ public class TestListener implements ITestListener {
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             String fileName = methodName + "_" + status + "_" + timestamp + ".png";
 
-            // Screenshot as file
+            // Guardar screenshot en disco local
             File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
                 File destFile = new File("test-output/screenshots/" + fileName);
@@ -35,9 +37,15 @@ public class TestListener implements ITestListener {
                 e.printStackTrace();
             }
 
-            // Screenshot for Allure
+            // Agregar screenshot a Allure con asociación correcta
             byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Screenshot - " + status, "image/png", new ByteArrayInputStream(screenshotBytes), ".png");
+            AllureLifecycle lifecycle = Allure.getLifecycle();
+            lifecycle.addAttachment(
+                    "Screenshot - " + status,
+                    "image/png",
+                    ".png",
+                    screenshotBytes
+            );
         }
     }
 
