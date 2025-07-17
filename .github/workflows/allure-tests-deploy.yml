@@ -49,6 +49,14 @@ jobs:
           echo "🔍 Buscando attachments en target/allure-results"
           find target/allure-results -type f \( -name "*.txt" -o -name "*.png" \) -exec ls -lh {} \; || echo "❌ No se encontraron .txt ni .png en target/allure-results"
 
+      - name: Mostrar contenido de target/allure-results/*.json
+        run: |
+          echo "🧪 Revisando JSONs:"
+          for file in target/allure-results/*.json; do
+            echo "📄 $file"
+            grep -i attachment "$file" || echo "⚠️ No se encontró attachment en $file"
+          done
+
       - name: Generate Allure Report
         run: allure generate target/allure-results --clean -o allure-report
 
