@@ -2,6 +2,7 @@ package listeners;
 
 import drivers.DriverFactory;
 import io.qameta.allure.Allure;
+import io.qameta.allure.AllureLifecycle;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -24,10 +25,11 @@ public class TestListener implements ITestListener {
         WebDriver driver = DriverFactory.getDriver();
 
         if (driver != null) {
-            // Guardar respaldo en disco
             String methodName = result.getMethod().getMethodName();
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+            // Copia de seguridad física (opcional)
             try {
                 File destFile = new File("test-output/screenshots/" + methodName + "_" + status + "_" + timestamp + ".png");
                 FileUtils.copyFile(screenshotFile, destFile);
@@ -35,9 +37,12 @@ public class TestListener implements ITestListener {
                 e.printStackTrace();
             }
 
-            // Adjuntar directamente al test con Allure (¡esto sí lo asocia bien!)
+            // Captura como bytes para Allure
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Screenshot - " + status, "image/png", new ByteArrayInputStream(screenshot), ".png");
+
+            // 🔥 Esta es la forma correcta con AllureLifecycle
+            AllureLifecycle lifecycle = Allure.getLifecycle();
+            lifecycle.addAttachment("Screenshot - " + status, "image/png", "png", new ByteArrayInputStream(screenshot));
         }
     }
 
