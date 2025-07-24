@@ -1,0 +1,131 @@
+{
+  "uid" : "287fa651759d4139",
+  "name" : "Verify that user cannot proceed to checkout without accepting terms and conditions",
+  "fullName" : "tests.CheckoutTest.testCannotProceedWithoutAcceptingTerms",
+  "historyId" : "82f410372aec8800342beb9456973541",
+  "time" : {
+    "start" : 1753396252152,
+    "stop" : 1753396253593,
+    "duration" : 1441
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1753396250325,
+      "stop" : 1753396252150,
+      "duration" : 1825
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "TOS Warning Popup Text:\nPlease accept the terms of service before the next step.",
+      "time" : {
+        "start" : 1753396253393,
+        "stop" : 1753396253393,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "95e0a7417e7a3095",
+      "name" : "Screenshot on Success - testCannotProceedWithoutAcceptingTerms",
+      "source" : "95e0a7417e7a3095.png",
+      "type" : "image/png",
+      "size" : 113304
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1753396253594,
+      "stop" : 1753396253664,
+      "duration" : 70
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.CheckoutTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.CheckoutTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCannotProceedWithoutAcceptingTerms"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ParallelTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "TestExecution"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.CheckoutTest"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmpptgkbjq6m"
+  }, {
+    "name" : "thread",
+    "value" : "3624@pkrvmpptgkbjq6m.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Cart - Validation Without Terms Agreement"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "287fa651759d4139.json",
+  "parameterValues" : [ ]
+}

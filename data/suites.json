@@ -1,0 +1,198 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "ParallelTestSuite",
+    "children" : [ {
+      "name" : "TestExecution",
+      "children" : [ {
+        "name" : "tests.CartTest",
+        "children" : [ {
+          "name" : "Verify that the correct product is added to the cart",
+          "uid" : "606dd02102e8063a",
+          "parentUid" : "a7dcad74c94bbed0cfc058d52fdf8b65",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396228554,
+            "stop" : 1753396230085,
+            "duration" : 1531
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify that a user can remove a product from the cart",
+          "uid" : "7f199999b562d427",
+          "parentUid" : "a7dcad74c94bbed0cfc058d52fdf8b65",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396232196,
+            "stop" : 1753396234190,
+            "duration" : 1994
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify that updating the quantity in the cart updates the subtotal",
+          "uid" : "ff6c176a59693e26",
+          "parentUid" : "a7dcad74c94bbed0cfc058d52fdf8b65",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396236168,
+            "stop" : 1753396238077,
+            "duration" : 1909
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "a7dcad74c94bbed0cfc058d52fdf8b65"
+      }, {
+        "name" : "tests.RegisterTest",
+        "children" : [ {
+          "name" : "Verify registration fails when required fields are empty",
+          "uid" : "a276245236bdc284",
+          "parentUid" : "b6657f83a376653fcb175b1b1cea1456",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396240008,
+            "stop" : 1753396240724,
+            "duration" : 716
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify registration fails with an invalid email format",
+          "uid" : "1bbcf35f7530f7cf",
+          "parentUid" : "b6657f83a376653fcb175b1b1cea1456",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396242697,
+            "stop" : 1753396243708,
+            "duration" : 1011
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify registration fails with a password shorter than allowed",
+          "uid" : "f69f62b1f1aba0d3",
+          "parentUid" : "b6657f83a376653fcb175b1b1cea1456",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396245697,
+            "stop" : 1753396246656,
+            "duration" : 959
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify that a user can register successfully with valid data",
+          "uid" : "43006d26e181c7ad",
+          "parentUid" : "b6657f83a376653fcb175b1b1cea1456",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396248543,
+            "stop" : 1753396250253,
+            "duration" : 1710
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "b6657f83a376653fcb175b1b1cea1456"
+      }, {
+        "name" : "tests.CheckoutTest",
+        "children" : [ {
+          "name" : "Verify that user cannot proceed to checkout without accepting terms and conditions",
+          "uid" : "287fa651759d4139",
+          "parentUid" : "5cd477459512b88c45eaa78646faefb9",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396252152,
+            "stop" : 1753396253593,
+            "duration" : 1441
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify that a registered user can complete the full checkout flow successfully",
+          "uid" : "f6f3fc7b9ceb4b73",
+          "parentUid" : "5cd477459512b88c45eaa78646faefb9",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396255440,
+            "stop" : 1753396265718,
+            "duration" : 10278
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify that a guest user can complete the full checkout flow successfully",
+          "uid" : "e98491a952df102d",
+          "parentUid" : "5cd477459512b88c45eaa78646faefb9",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396267557,
+            "stop" : 1753396275018,
+            "duration" : 7461
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "5cd477459512b88c45eaa78646faefb9"
+      }, {
+        "name" : "tests.LoginTest",
+        "children" : [ {
+          "name" : "Verify login fails with incorrect password",
+          "uid" : "2a52667f038d2199",
+          "parentUid" : "c8eae9aadee15aceac470f23ce669311",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396277013,
+            "stop" : 1753396280007,
+            "duration" : 2994
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify login fails with a non-registered user",
+          "uid" : "50bdcd72c5c0065f",
+          "parentUid" : "c8eae9aadee15aceac470f23ce669311",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396281887,
+            "stop" : 1753396282871,
+            "duration" : 984
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Verify that a registered user can log in successfully",
+          "uid" : "9a13b9dc3b96ab81",
+          "parentUid" : "c8eae9aadee15aceac470f23ce669311",
+          "status" : "passed",
+          "time" : {
+            "start" : 1753396284825,
+            "stop" : 1753396287995,
+            "duration" : 3170
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c8eae9aadee15aceac470f23ce669311"
+      } ],
+      "uid" : "b43f47fced4e1f77417986278a15faff"
+    } ],
+    "uid" : "4d58f9c38195cb429c56cbfdcbe25ad3"
+  } ]
+}
