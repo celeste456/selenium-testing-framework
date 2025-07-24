@@ -1,130 +1,130 @@
 [ {
-  "uid" : "7f199999b562d427",
-  "name" : "Verify that a user can remove a product from the cart",
-  "time" : {
-    "start" : 1753396232196,
-    "stop" : 1753396234190,
-    "duration" : 1994
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "606dd02102e8063a",
-  "name" : "Verify that the correct product is added to the cart",
-  "time" : {
-    "start" : 1753396228554,
-    "stop" : 1753396230085,
-    "duration" : 1531
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "287fa651759d4139",
-  "name" : "Verify that user cannot proceed to checkout without accepting terms and conditions",
-  "time" : {
-    "start" : 1753396252152,
-    "stop" : 1753396253593,
-    "duration" : 1441
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9a13b9dc3b96ab81",
-  "name" : "Verify that a registered user can log in successfully",
-  "time" : {
-    "start" : 1753396284825,
-    "stop" : 1753396287995,
-    "duration" : 3170
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "f69f62b1f1aba0d3",
-  "name" : "Verify registration fails with a password shorter than allowed",
-  "time" : {
-    "start" : 1753396245697,
-    "stop" : 1753396246656,
-    "duration" : 959
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f6f3fc7b9ceb4b73",
-  "name" : "Verify that a registered user can complete the full checkout flow successfully",
-  "time" : {
-    "start" : 1753396255440,
-    "stop" : 1753396265718,
-    "duration" : 10278
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "43006d26e181c7ad",
-  "name" : "Verify that a user can register successfully with valid data",
-  "time" : {
-    "start" : 1753396248543,
-    "stop" : 1753396250253,
-    "duration" : 1710
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "1bbcf35f7530f7cf",
-  "name" : "Verify registration fails with an invalid email format",
-  "time" : {
-    "start" : 1753396242697,
-    "stop" : 1753396243708,
-    "duration" : 1011
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2a52667f038d2199",
-  "name" : "Verify login fails with incorrect password",
-  "time" : {
-    "start" : 1753396277013,
-    "stop" : 1753396280007,
-    "duration" : 2994
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ff6c176a59693e26",
-  "name" : "Verify that updating the quantity in the cart updates the subtotal",
-  "time" : {
-    "start" : 1753396236168,
-    "stop" : 1753396238077,
-    "duration" : 1909
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a276245236bdc284",
+  "uid" : "6499c2fe171dd7f1",
   "name" : "Verify registration fails when required fields are empty",
   "time" : {
-    "start" : 1753396240008,
-    "stop" : 1753396240724,
-    "duration" : 716
+    "start" : 1753397489504,
+    "stop" : 1753397490264,
+    "duration" : 760
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "50bdcd72c5c0065f",
+  "uid" : "bc61c20b47ff854e",
+  "name" : "Verify that user cannot proceed to checkout without accepting terms and conditions",
+  "time" : {
+    "start" : 1753397502462,
+    "stop" : 1753397503955,
+    "duration" : 1493
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bbbac8b050e438fc",
+  "name" : "Verify that a registered user can complete the full checkout flow successfully",
+  "time" : {
+    "start" : 1753397505872,
+    "stop" : 1753397517464,
+    "duration" : 11592
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2dd23ffd9843dced",
+  "name" : "Verify login fails with incorrect password",
+  "time" : {
+    "start" : 1753397530799,
+    "stop" : 1753397534066,
+    "duration" : 3267
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "6020146007bd590",
   "name" : "Verify login fails with a non-registered user",
   "time" : {
-    "start" : 1753396281887,
-    "stop" : 1753396282871,
-    "duration" : 984
+    "start" : 1753397536106,
+    "stop" : 1753397537240,
+    "duration" : 1134
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e98491a952df102d",
+  "uid" : "e42e039d0f0836cd",
+  "name" : "Verify registration fails with a password shorter than allowed",
+  "time" : {
+    "start" : 1753397495479,
+    "stop" : 1753397496615,
+    "duration" : 1136
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3022d433d96ae91b",
+  "name" : "Verify that the correct product is added to the cart",
+  "time" : {
+    "start" : 1753397476765,
+    "stop" : 1753397478769,
+    "duration" : 2004
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "62e861a83a13b211",
+  "name" : "Verify that a registered user can log in successfully",
+  "time" : {
+    "start" : 1753397539298,
+    "stop" : 1753397542804,
+    "duration" : 3506
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8f182493c200a92c",
   "name" : "Verify that a guest user can complete the full checkout flow successfully",
   "time" : {
-    "start" : 1753396267557,
-    "stop" : 1753396275018,
-    "duration" : 7461
+    "start" : 1753397519525,
+    "stop" : 1753397528619,
+    "duration" : 9094
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "311e62906432d1af",
+  "name" : "Verify that updating the quantity in the cart updates the subtotal",
+  "time" : {
+    "start" : 1753397485395,
+    "stop" : 1753397487507,
+    "duration" : 2112
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9b6cb6175d9b854e",
+  "name" : "Verify registration fails with an invalid email format",
+  "time" : {
+    "start" : 1753397492289,
+    "stop" : 1753397493405,
+    "duration" : 1116
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d94bd6ea1bf1135",
+  "name" : "Verify that a user can register successfully with valid data",
+  "time" : {
+    "start" : 1753397498782,
+    "stop" : 1753397500557,
+    "duration" : 1775
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "c5da89088d573d3d",
+  "name" : "Verify that a user can remove a product from the cart",
+  "time" : {
+    "start" : 1753397480859,
+    "stop" : 1753397482867,
+    "duration" : 2008
   },
   "status" : "passed",
   "severity" : "critical"

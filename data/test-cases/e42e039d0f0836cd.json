@@ -1,0 +1,128 @@
+{
+  "uid" : "e42e039d0f0836cd",
+  "name" : "Verify registration fails with a password shorter than allowed",
+  "fullName" : "tests.RegisterTest.testRegisterWithShortPassword",
+  "historyId" : "9be6803129b3008753cc08a7ee5d024f",
+  "time" : {
+    "start" : 1753397495479,
+    "stop" : 1753397496615,
+    "duration" : 1136
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1753397493481,
+      "stop" : 1753397495476,
+      "duration" : 1995
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "3aa73525570cdf3a",
+      "name" : "UserData",
+      "source" : "3aa73525570cdf3a.json",
+      "type" : "application/json",
+      "size" : 132
+    }, {
+      "uid" : "681fff78c60df837",
+      "name" : "Screenshot on Success - testRegisterWithShortPassword",
+      "source" : "681fff78c60df837.png",
+      "type" : "image/png",
+      "size" : 100124
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1753397496617,
+      "stop" : 1753397496692,
+      "duration" : 75
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testRegisterWithShortPassword"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ParallelTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "TestExecution"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmpptgkbjq6m"
+  }, {
+    "name" : "thread",
+    "value" : "3754@pkrvmpptgkbjq6m.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Invalid Registration"
+  }, {
+    "name" : "feature",
+    "value" : "Register"
+  }, {
+    "name" : "epic",
+    "value" : "User Registration"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e42e039d0f0836cd.json",
+  "parameterValues" : [ ]
+}

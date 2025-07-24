@@ -1,0 +1,128 @@
+{
+  "uid" : "9b6cb6175d9b854e",
+  "name" : "Verify registration fails with an invalid email format",
+  "fullName" : "tests.RegisterTest.testRegisterWithInvalidEmail",
+  "historyId" : "1e72e7ba3167158a0eb6a7924f825a2",
+  "time" : {
+    "start" : 1753397492289,
+    "stop" : 1753397493405,
+    "duration" : 1116
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1753397490341,
+      "stop" : 1753397492281,
+      "duration" : 1940
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "d1c1ab2fab9fc639",
+      "name" : "UserData",
+      "source" : "d1c1ab2fab9fc639.json",
+      "type" : "application/json",
+      "size" : 128
+    }, {
+      "uid" : "7850d321706ddfac",
+      "name" : "Screenshot on Success - testRegisterWithInvalidEmail",
+      "source" : "7850d321706ddfac.png",
+      "type" : "image/png",
+      "size" : 97756
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1753397493407,
+      "stop" : 1753397493479,
+      "duration" : 72
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testRegisterWithInvalidEmail"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ParallelTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "TestExecution"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmpptgkbjq6m"
+  }, {
+    "name" : "thread",
+    "value" : "3754@pkrvmpptgkbjq6m.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Invalid Registration"
+  }, {
+    "name" : "feature",
+    "value" : "Register"
+  }, {
+    "name" : "epic",
+    "value" : "User Registration"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9b6cb6175d9b854e.json",
+  "parameterValues" : [ ]
+}

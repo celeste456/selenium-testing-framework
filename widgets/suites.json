@@ -5,9 +5,9 @@
     "name" : "ParallelTestSuite",
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 13,
+      "passed" : 12,
       "unknown" : 0,
       "total" : 13
     }

@@ -1,6 +1,17 @@
 {
   "total" : 8,
   "items" : [ {
+    "uid" : "21c012e2605cbc23318eb9c37e945947",
+    "name" : "User Authentication",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
     "uid" : "6182ce47c2bb8f04a8a81d57bcad1149",
     "name" : "Add to Cart",
     "statistic" : {
@@ -69,17 +80,6 @@
   }, {
     "uid" : "21e5cc8fd694a32bd0172050ce2bd396",
     "name" : "Full Checkout Flow as Guest",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "21c012e2605cbc23318eb9c37e945947",
-    "name" : "User Authentication",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

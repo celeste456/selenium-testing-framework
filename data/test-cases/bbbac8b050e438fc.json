@@ -1,0 +1,173 @@
+{
+  "uid" : "bbbac8b050e438fc",
+  "name" : "Verify that a registered user can complete the full checkout flow successfully",
+  "fullName" : "tests.CheckoutTest.testFullCheckoutFlowAsReturningCustomer",
+  "historyId" : "b8997f89cf649a38014b6da8b2a108fc",
+  "time" : {
+    "start" : 1753397505872,
+    "stop" : 1753397517464,
+    "duration" : 11592
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1753397504033,
+      "stop" : 1753397505869,
+      "duration" : 1836
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Completing billing address as logged-in user...",
+      "time" : {
+        "start" : 1753397511670,
+        "stop" : 1753397511670,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Payment instructions verified:\nMail Personal or Business Check, Cashier's Check or money order to:\n\nTricentis GmbH\nLeonard-Bernstein-Straße 10\n1220 Vienna\nAustria\nNotice that if you pay by Personal or Business Check, your order may be held for up to 10 days after we receive your check to allow enough time for the check to clear. If you want us to ship faster upon receipt of your payment, then we recommend your send a money order or Cashier's check.\nP.S. You can edit this text from admin panel.\nBack",
+      "time" : {
+        "start" : 1753397515184,
+        "stop" : 1753397515184,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Confirmation message:\nYour order has been successfully processed!\nOrder number: 2055701\nClick here for order details.",
+      "time" : {
+        "start" : 1753397517305,
+        "stop" : 1753397517305,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "dc46c5156cbf1928",
+      "name" : "UserData",
+      "source" : "dc46c5156cbf1928.json",
+      "type" : "application/json",
+      "size" : 136
+    }, {
+      "uid" : "50754c5b1ff730d3",
+      "name" : "checkoutData",
+      "source" : "50754c5b1ff730d3.json",
+      "type" : "application/json",
+      "size" : 280
+    }, {
+      "uid" : "cfbb97df4b81c15",
+      "name" : "Screenshot on Success - testFullCheckoutFlowAsReturningCustomer",
+      "source" : "cfbb97df4b81c15.png",
+      "type" : "image/png",
+      "size" : 77604
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1753397517465,
+      "stop" : 1753397517541,
+      "duration" : 76
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.CheckoutTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.CheckoutTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testFullCheckoutFlowAsReturningCustomer"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ParallelTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "TestExecution"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.CheckoutTest"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmpptgkbjq6m"
+  }, {
+    "name" : "thread",
+    "value" : "3754@pkrvmpptgkbjq6m.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Full Checkout Flow as Returning Customer"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bbbac8b050e438fc.json",
+  "parameterValues" : [ ]
+}

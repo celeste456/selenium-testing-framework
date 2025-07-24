@@ -1,0 +1,128 @@
+{
+  "uid" : "6499c2fe171dd7f1",
+  "name" : "Verify registration fails when required fields are empty",
+  "fullName" : "tests.RegisterTest.testRegisterWithEmptyFields",
+  "historyId" : "616b4b2a6f1f944dccdecfc5e1afbb3f",
+  "time" : {
+    "start" : 1753397489504,
+    "stop" : 1753397490264,
+    "duration" : 760
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1753397487584,
+      "stop" : 1753397489499,
+      "duration" : 1915
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2664c56e7c95b671",
+      "name" : "UserData",
+      "source" : "2664c56e7c95b671.json",
+      "type" : "application/json",
+      "size" : 95
+    }, {
+      "uid" : "f0239e3f7ebc9e74",
+      "name" : "Screenshot on Success - testRegisterWithEmptyFields",
+      "source" : "f0239e3f7ebc9e74.png",
+      "type" : "image/png",
+      "size" : 99198
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1753397490266,
+      "stop" : 1753397490338,
+      "duration" : 72
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testRegisterWithEmptyFields"
+  }, {
+    "name" : "parentSuite",
+    "value" : "ParallelTestSuite"
+  }, {
+    "name" : "suite",
+    "value" : "TestExecution"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.RegisterTest"
+  }, {
+    "name" : "host",
+    "value" : "pkrvmpptgkbjq6m"
+  }, {
+    "name" : "thread",
+    "value" : "3754@pkrvmpptgkbjq6m.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Invalid Registration"
+  }, {
+    "name" : "feature",
+    "value" : "Register"
+  }, {
+    "name" : "epic",
+    "value" : "User Registration"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6499c2fe171dd7f1.json",
+  "parameterValues" : [ ]
+}
